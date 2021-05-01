@@ -50,3 +50,7 @@ td {
 a {
     color: #000;
 }
+
+.notice1, .notice2 {
+    color: green;
+}
