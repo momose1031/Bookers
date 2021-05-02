@@ -36,12 +36,15 @@
 </table>
 <h2>New book</h2>
 <% if @book.errors.any? %>
-  <%= @book.errors.count %>
-  <% @book.errors.full_messages.each do |message| %>
-    <%= message %>
-  <% end %>
+  <%= @book.errors.count %>errors blank form
+  <ul>
+    <% @book.errors.full_messages.each do |msg| %>
+      <li><%= msg %></li>
+    <% end %>
+   </ul>
 <% end %>
 <%= form_with model:@book, local:true do |f| %>
+  
   <div class="field">
     <%= f.label :title, "Title" %>
     <%= f.text_field :title %>
